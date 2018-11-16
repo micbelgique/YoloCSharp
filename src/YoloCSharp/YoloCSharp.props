@@ -1,0 +1,43 @@
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+    <Dependences>$(MSBuildThisFileDirectory)\..\dependences</Dependences>
+  </PropertyGroup>
+	<ItemGroup>
+		<None Include="$(Dependences)\opencv_world331.dll">
+			<Link>opencv_world331.dll</Link>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>false</Visible>
+		</None>
+		<None Include="$(Dependences)\YoloApi.dll">
+			<Link>YoloApi.dll</Link>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>false</Visible>
+		</None>
+		<None Include="$(Dependences)\yolo_cpp_dll.dll">
+			<Link>yolo_cpp_dll.dll</Link>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>false</Visible>
+		</None>
+    <None Include="$(Dependences)\pthreadVC2.dll">
+      <Link>pthreadVC2.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>false</Visible>
+    </None>
+
+    <None Include="$(Dependences)\libdarknet.so">
+      <Link>libdarknet.so</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>false</Visible>
+    </None>
+    <None Include="$(Dependences)\libOpenCvSharpExtern.so">
+      <Link>libOpenCvSharpExtern.so</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>false</Visible>
+    </None>
+    <None Include="$(Dependences)\libYoloApi.so">
+      <Link>libYoloApi.so</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>false</Visible>
+    </None>
+  </ItemGroup>
+</Project>

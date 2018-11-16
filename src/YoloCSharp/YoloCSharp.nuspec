@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>YoloCSharp</id>
+    <version>0.9.9</version>
+    <title>Yolo (You Only Look Once) For CSharp</title>
+    <description>Yolo/Darknet Real-Time Object Detection for CSharp</description>
+    <authors>Denis Pettens</authors>
+    <owners>syvido</owners>
+    <copyright>Copyright 2018</copyright>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>OpenCv Yolo/Darknet Wrapper CV</tags>
+
+    <dependencies>
+      <dependency id="OpenCvSharp3-AnyCPU" version="3.3.1.20171117" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="YoloCSharp.props" target="build\YoloCSharp.props" />
+    
+    <file src="bin\Release\netstandard2.0\YoloCSharp.dll" target="lib\netstandard2.0" />
+    <file src="bin\Release\netstandard2.0\YoloCSharp.pdb" target="lib\netstandard2.0" />
+    <file src="bin\Release\netstandard2.0\YoloCSharp.deps.json" target="lib\netstandard2.0" />
+    
+    <file src="dependences\**" target="dependences" />
+  </files>
+</package>
