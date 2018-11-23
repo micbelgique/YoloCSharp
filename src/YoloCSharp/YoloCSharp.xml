@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>YoloCSharp</name>
+    </assembly>
+    <members>
+        <member name="T:YoloCSharp.Darknet">
+            <inheritdoc />
+            <summary>
+            Provides a Darknet detector which can be used to analyze image and find all detectable objects inside
+            </summary>
+        </member>
+        <member name="M:YoloCSharp.Darknet.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Initializes a new Darknet detector with the <paramref name="cfgFile"/> and the <paramref name="weightFile"/>
+            </summary>
+            <param name="cfgFile">The *.cfg file</param>
+            <param name="weightFile">The *.weights file</param>
+            <param name="gpuId">The index of a CUDA compatible GPU</param>
+        </member>
+        <member name="M:YoloCSharp.Darknet.Detect(OpenCvSharp.Mat,System.Single,System.Boolean)">
+            <summary>
+            Use to detect objects on an OpenCV Mat object and return all found objects
+            </summary>
+            <returns>List of <see cref="T:YoloCSharp.YoloResult">YoloResult</see></returns>
+            <param name="mat">The frame to analyze</param>
+            <param name="thresh">Threshold at which an object should be confirmed</param>
+            <param name="useMean">Unknown parameter</param>
+        </member>
+        <member name="M:YoloCSharp.Darknet.Dispose">
+            <inheritdoc />
+            <summary>
+            Dispose method to close the darknet process 
+            </summary>
+        </member>
+        <member name="T:YoloCSharp.YoloResult">
+            <summary>
+            Represents the detection information of an object by Yolo
+            </summary>
+        </member>
+        <member name="P:YoloCSharp.YoloResult.X">
+            <value>
+            X coordinate of the top-left corner of bounded box
+            </value>
+        </member>
+        <member name="P:YoloCSharp.YoloResult.Y">
+            <value>
+            Y coordinate of the top-left corner of bounded box
+            </value>
+        </member>
+        <member name="P:YoloCSharp.YoloResult.Width">
+            <value>
+            Width of bounded box
+            </value>
+        </member>
+        <member name="P:YoloCSharp.YoloResult.Height">
+            <summary>
+            Height of bounded box
+            </summary>
+        </member>
+        <member name="P:YoloCSharp.YoloResult.Prob">
+            <value>
+            Probability that the object was found correctly
+            </value>
+        </member>
+        <member name="P:YoloCSharp.YoloResult.ObjId">
+            <value>
+            Class of object - from range [0, classes-1]
+            </value>
+        </member>
+        <member name="P:YoloCSharp.YoloResult.TrackId">
+            <value>
+            Tracking id for video (0 - untracked, 1 - inf - tracked object)
+            </value>
+        </member>
+        <member name="P:YoloCSharp.YoloResult.FramesCounter">
+            <value>
+            Counter of frames on which the object was detected
+            </value>
+        </member>
+    </members>
+</doc>

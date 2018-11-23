@@ -1,32 +1,33 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using OpenCvSharp;
 
 namespace YoloCSharp
 {
+    /// <inheritdoc />
     /// <summary>
-    /// Represents a Darknet detector which can be used to analyze multiple image sources
+    /// Provides a Darknet detector which can be used to analyze image and find all detectable objects inside
     /// </summary>
     public class Darknet : IDisposable
     {
         /// <summary>
-        /// Creates a new detector instance and loading the data into it
+        /// Initializes a new Darknet detector with the <paramref name="cfgFile"/> and the <paramref name="weightFile"/>
         /// </summary>
         /// <param name="cfgFile">The *.cfg file</param>
         /// <param name="weightFile">The *.weights file</param>
-        /// <param name="gpuId">The index of the CUDA compatible GPU</param>
+        /// <param name="gpuId">The index of a CUDA compatible GPU</param>
         public Darknet(string cfgFile, string weightFile, int gpuId = 0)
         {
             Wrapper.Init(cfgFile, weightFile, gpuId);
         }
 
         /// <summary>
-        /// Used to detect classes on a opencv Mat object, as a list of NetResult
+        /// Use to detect objects on an OpenCV Mat object and return all found objects
         /// </summary>
+        /// <returns>List of <see cref="YoloResult">YoloResult</see></returns>
         /// <param name="mat">The frame to analyze</param>
-        /// <param name="thresh">Threshold at which a class should be confirmed</param>
-        /// <param name="useMean">Unknonwn parameter</param>
-        /// <returns></returns>
+        /// <param name="thresh">Threshold at which an object should be confirmed</param>
+        /// <param name="useMean">Unknown parameter</param>
         public unsafe List<YoloResult> Detect(Mat mat, float thresh = 0.2f, bool useMean = false)
         {
             Wrapper.Detect(mat.Data, mat.Rows, mat.Cols, thresh, useMean, out var elems, out var elemsSize);
@@ -40,6 +41,10 @@ namespace YoloCSharp
             return results;
         }
 
+        /// <inheritdoc />
+        /// <summary>
+        /// Dispose method to close the darknet process 
+        /// </summary>
         public void Dispose()
         {
             Wrapper.Close();
