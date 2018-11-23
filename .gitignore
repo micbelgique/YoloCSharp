@@ -84,6 +84,12 @@ ipch/
 *.VC.db
 *.VC.VC.opendb
 
+# Linux c++ compiled object files
+*.slo
+*.lo
+*.o
+*.obj
+
 # Visual Studio profiler
 *.psess
 *.vsp

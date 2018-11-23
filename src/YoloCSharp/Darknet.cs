@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using OpenCvSharp;
 
 namespace YoloCSharp
@@ -44,10 +44,10 @@ namespace YoloCSharp
         /// <returns></returns>
         public unsafe List<NetResult> Detect(Mat mat, float thresh = 0.2f, bool useMean = false)
         {
-            Wrapper.Detect(mat.Data, out var elems, out var resultSize, mat.Rows, mat.Cols, thresh, useMean);
+            Wrapper.Detect(mat.Data, mat.Rows, mat.Cols, thresh, useMean, out var elems, out var elemsSize);
 
-            var results = new List<NetResult>(resultSize);
-            for(var i = 0; i < resultSize; i++)
+            var results = new List<NetResult>(elemsSize);
+            for(var i = 0; i < elemsSize; i++)
             {
                 results.Add(new NetResult(elems[i].X, elems[i].Y, elems[i].W, elems[i].H, elems[i].Prob, elems[i].ObjId, elems[i].TrackId, elems[i].FramesCounter));
             }
