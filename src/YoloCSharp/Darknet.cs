@@ -9,31 +9,15 @@ namespace YoloCSharp
     /// </summary>
     public class Darknet : IDisposable
     {
-        private readonly string _cfgPath;
-        private readonly string _weightPath;
-        private readonly int _gpuId;
-
         /// <summary>
         /// Creates a new detector instance and loading the data into it
         /// </summary>
-        /// <param name="cfgPath">The *.cfg file</param>
-        /// <param name="weightPath">The *.weights file</param>
+        /// <param name="cfgFile">The *.cfg file</param>
+        /// <param name="weightFile">The *.weights file</param>
         /// <param name="gpuId">The index of the CUDA compatible GPU</param>
-        public Darknet(string cfgPath, string weightPath, int gpuId = 0)
+        public Darknet(string cfgFile, string weightFile, int gpuId = 0)
         {
-            _cfgPath = cfgPath;
-            _weightPath = weightPath;
-            _gpuId = gpuId;
-
-            Setup();
-        }
-
-        /// <summary>
-        /// Used to initialize the Darknet DNN
-        /// </summary>
-        private void Setup()
-        {
-            Wrapper.Init(_cfgPath, _weightPath, _gpuId);
+            Wrapper.Init(cfgFile, weightFile, gpuId);
         }
 
         /// <summary>
