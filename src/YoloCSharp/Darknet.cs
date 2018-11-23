@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using OpenCvSharp;
 
@@ -6,7 +7,7 @@ namespace YoloCSharp
     /// <summary>
     /// Represents a Darknet detector which can be used to analyze multiple image sources
     /// </summary>
-    public class Darknet
+    public class Darknet : IDisposable
     {
         private readonly string _cfgPath;
         private readonly string _weightPath;
@@ -55,10 +56,7 @@ namespace YoloCSharp
             return results;
         }
 
-        /// <summary>
-        /// Closes the Darknet DNN
-        /// </summary>
-        public void Close()
+        public void Dispose()
         {
             Wrapper.Close();
         }
