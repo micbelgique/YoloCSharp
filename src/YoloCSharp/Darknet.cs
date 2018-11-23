@@ -27,14 +27,14 @@ namespace YoloCSharp
         /// <param name="thresh">Threshold at which a class should be confirmed</param>
         /// <param name="useMean">Unknonwn parameter</param>
         /// <returns></returns>
-        public unsafe List<NetResult> Detect(Mat mat, float thresh = 0.2f, bool useMean = false)
+        public unsafe List<YoloResult> Detect(Mat mat, float thresh = 0.2f, bool useMean = false)
         {
             Wrapper.Detect(mat.Data, mat.Rows, mat.Cols, thresh, useMean, out var elems, out var elemsSize);
 
-            var results = new List<NetResult>(elemsSize);
+            var results = new List<YoloResult>(elemsSize);
             for(var i = 0; i < elemsSize; i++)
             {
-                results.Add(new NetResult(elems[i].X, elems[i].Y, elems[i].W, elems[i].H, elems[i].Prob, elems[i].ObjId, elems[i].TrackId, elems[i].FramesCounter));
+                results.Add(new YoloResult(elems[i].X, elems[i].Y, elems[i].W, elems[i].H, elems[i].Prob, elems[i].ObjId, elems[i].TrackId, elems[i].FramesCounter));
             }
 
             return results;
