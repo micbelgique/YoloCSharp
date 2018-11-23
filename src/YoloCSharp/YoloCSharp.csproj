@@ -1,8 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Platforms>x64</Platforms>
+    <Version>0.9.13</Version>
+    <Owners>syvido</Owners>
+    <Authors>Denis Pettens</Authors>
+    <Company>Microsoft Innovation Center Belgium</Company>
+    <Description>Yolo/Darknet Real-Time Object Detection for CSharp</Description>
+    <Copyright>Copyright 2018</Copyright>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/micbelgique/YoloCSharp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/micbelgique/YoloCSharp</RepositoryUrl>
+    <PackageTags>OpenCv Yolo/Darknet Wrapper CV</PackageTags>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -16,34 +25,48 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="dependences\opencv_world340.dll">
+    <None Update="dependences\libdarknet.so">
+      <Pack>true</Pack>
+      <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="dependences\libOpenCvSharpExtern.so">
+      <Pack>true</Pack>
+      <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="dependences\libYoloApi.so">
+      <Pack>true</Pack>
+      <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="dependences\opencv_world331.dll">
+      <Pack>true</Pack>
+      <PackagePath>\</PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="dependences\pthreadVC2.dll">
+      <Pack>true</Pack>
+      <PackagePath>\</PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="dependences\YoloApi.dll">
+      <Pack>true</Pack>
+      <PackagePath>\</PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="dependences\yolo_cpp_dll.dll">
+      <Pack>true</Pack>
+      <PackagePath>\</PackagePath>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="lib\opencv_world340.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="lib\pthreadVC2.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="lib\YoloApi.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="lib\yolo_cpp_dll.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <Content Include="YoloCSharp.props">
+      <Pack>true</Pack>
+      <PackagePath>\build\</PackagePath>
+    </Content>
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">

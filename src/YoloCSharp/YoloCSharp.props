@@ -2,8 +2,10 @@
 	<PropertyGroup>
     <Dependences>$(MSBuildThisFileDirectory)\..\dependences</Dependences>
   </PropertyGroup>
+
+  <!-- Windows dependences -->
 	<ItemGroup>
-		<None Include="$(Dependences)\opencv_world331.dll">
+	  <None Include="$(Dependences)\opencv_world331.dll">
 			<Link>opencv_world331.dll</Link>
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Visible>false</Visible>
@@ -23,7 +25,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Visible>false</Visible>
     </None>
+	</ItemGroup>
 
+  <!-- Linux dependences -->
+  <ItemGroup>
     <None Include="$(Dependences)\libdarknet.so">
       <Link>libdarknet.so</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
