@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoloCSharp", "src\YoloCSharp\YoloCSharp.csproj", "{A48F8CE4-4D03-44BC-9ABC-3ABD2604EADD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8E1DD125-A767-4228-A5C6-C106B36793CA} = {8E1DD125-A767-4228-A5C6-C106B36793CA}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "YoloApi", "src\YoloApi\YoloApi.vcxproj", "{8E1DD125-A767-4228-A5C6-C106B36793CA}"
 EndProject
