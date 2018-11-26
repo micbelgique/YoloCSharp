@@ -1,7 +1,0 @@
-TODO :
-
-* Create readme 
-    * Talk about *.weights
-    * Explain bug with OpenCV > 3.4.0
-* Add makefile for YoloApiLinux
-* Try to merge YoloApiLinux and YoloApiWindows
