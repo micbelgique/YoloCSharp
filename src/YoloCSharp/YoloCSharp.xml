@@ -39,19 +39,19 @@
             </summary>
         </member>
         <member name="P:YoloCSharp.YoloResult.X">
-            <value>
+            <summary>
             X coordinate of the top-left corner of bounded box
-            </value>
+            </summary>
         </member>
         <member name="P:YoloCSharp.YoloResult.Y">
-            <value>
+            <summary>
             Y coordinate of the top-left corner of bounded box
-            </value>
+            </summary>
         </member>
         <member name="P:YoloCSharp.YoloResult.Width">
-            <value>
+            <summary>
             Width of bounded box
-            </value>
+            </summary>
         </member>
         <member name="P:YoloCSharp.YoloResult.Height">
             <summary>
@@ -59,24 +59,24 @@
             </summary>
         </member>
         <member name="P:YoloCSharp.YoloResult.Prob">
-            <value>
+            <summary>
             Probability that the object was found correctly
-            </value>
+            </summary>
         </member>
         <member name="P:YoloCSharp.YoloResult.ObjId">
-            <value>
+            <summary>
             Class of object - from range [0, classes-1]
-            </value>
+            </summary>
         </member>
         <member name="P:YoloCSharp.YoloResult.TrackId">
-            <value>
+            <summary>
             Tracking id for video (0 - untracked, 1 - inf - tracked object)
-            </value>
+            </summary>
         </member>
         <member name="P:YoloCSharp.YoloResult.FramesCounter">
-            <value>
+            <summary>
             Counter of frames on which the object was detected
-            </value>
+            </summary>
         </member>
     </members>
 </doc>

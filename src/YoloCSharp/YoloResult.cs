@@ -5,19 +5,19 @@
     /// </summary>
     public class YoloResult
     {
-        /// <value>
+        /// <summary>
         /// X coordinate of the top-left corner of bounded box
-        /// </value>
+        /// </summary>
         public uint X { get; }
 
-        /// <value>
+        /// <summary>
         /// Y coordinate of the top-left corner of bounded box
-        /// </value>
+        /// </summary>
         public uint Y { get; }
 
-        /// <value>
+        /// <summary>
         /// Width of bounded box
-        /// </value>
+        /// </summary>
         public uint Width { get; }
 
         /// <summary>
@@ -25,24 +25,24 @@
         /// </summary>
         public uint Height { get; }
 
-        /// <value>
+        /// <summary>
         /// Probability that the object was found correctly
-        /// </value>
+        /// </summary>
         public float Prob { get; }
 
-        /// <value>
+        /// <summary>
         /// Class of object - from range [0, classes-1]
-        /// </value>
+        /// </summary>
         public uint ObjId { get; }
 
-        /// <value>
+        /// <summary>
         /// Tracking id for video (0 - untracked, 1 - inf - tracked object)
-        /// </value>
+        /// </summary>
         public uint TrackId { get; }
 
-        /// <value>
+        /// <summary>
         /// Counter of frames on which the object was detected
-        /// </value>
+        /// </summary>
         public uint FramesCounter { get; }
 
         internal YoloResult(uint x, uint y, uint width, uint height, float prob, uint objId, uint trackId, uint framesCounter)
