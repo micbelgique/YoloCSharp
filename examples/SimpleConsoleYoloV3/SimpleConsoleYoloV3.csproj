@@ -8,11 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="OpenCvSharp3-AnyCPU" Version="3.3.1.20171117" />
-    <PackageReference Include="YoloCSharp" Version="0.9.13" />
+    <PackageReference Include="YoloCSharp" Version="0.9.15" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(SolutionDir)examples\data&quot; &quot;$(OutDir)\data&quot; /y /i" />
+    <Exec Condition="'$(OS)' == 'Windows_NT'" Command="xcopy &quot;$(SolutionDir)examples\data&quot; &quot;$(OutDir)\data&quot; /y /i" />
+    <Exec Condition="'$(OS)' == 'Unix'" Command="cp -R ../data $(OutDir)/data" />
   </Target>
 
 </Project>

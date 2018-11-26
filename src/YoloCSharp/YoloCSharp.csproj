@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Platforms>x64</Platforms>
-    <Version>0.9.14</Version>
+    <Version>0.9.15</Version>
     <Owners>syvido</Owners>
     <Authors>Denis Pettens</Authors>
     <Company>Microsoft Innovation Center Belgium</Company>
@@ -13,12 +13,10 @@
     <RepositoryUrl>https://github.com/micbelgique/YoloCSharp</RepositoryUrl>
     <PackageTags>OpenCv Yolo/Darknet Wrapper CV</PackageTags>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+
+  <PropertyGroup>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DocumentationFile>D:\Work\Development\Projects\MIC\YoloCSharp\src\YoloCSharp\YoloCSharp.xml</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
@@ -71,6 +69,6 @@
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="xcopy &quot;$(SolutionDir)src\YoloApi\x64\Release\YoloApi.dll&quot; &quot;dependences&quot; /y" />
+    <Copy Condition="'$(OS)' == 'Windows_NT'" SourceFiles="$(SolutionDir)src\YoloApi\x64\Release\YoloApi.dll" DestinationFolder="dependences" />
   </Target>
 </Project>
