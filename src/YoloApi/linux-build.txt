@@ -1,2 +1,3 @@
-gcc -Wall -fPIC -O -D OPENCV -I /mnt/data/Work/Development/Projects/MIC/darknet-linux/src YoloApiLinux.cpp -c -o YoloApiLinux.o
-gcc -Wall -shared -L /mnt/data/Work/Development/Projects/MIC/darknet-linux/ -ldarknet YoloApiLinux.o -o YoloApi.so
+mkdir -p x64/Linux
+gcc -Wall -fPIC -D OPENCV -I ../../../darknet/src -O -c YoloApi.cpp -o x64/Linux/YoloApi.o
+gcc -Wall -shared -L ../../../darknet/ YoloApi.o -o x64/Linux/libYoloApi.so -ldarknet
