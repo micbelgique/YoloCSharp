@@ -3,26 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{71FFD7BE-73C7-4D83-B982-E5D241E492D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{EA80E3E7-2511-420E-9C63-9B45F25B344B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{D24D45A4-E606-403D-AE6E-E2A8AFA5BF1B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "YoloApi", "src\YoloApi\YoloApi.vcxproj", "{8E1DD125-A767-4228-A5C6-C106B36793CA}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YoloCSharp", "src\YoloCSharp\YoloCSharp.csproj", "{A48F8CE4-4D03-44BC-9ABC-3ABD2604EADD}"
 	ProjectSection(ProjectDependencies) = postProject
 		{8E1DD125-A767-4228-A5C6-C106B36793CA} = {8E1DD125-A767-4228-A5C6-C106B36793CA}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "YoloApi", "src\YoloApi\YoloApi.vcxproj", "{8E1DD125-A767-4228-A5C6-C106B36793CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleConsoleNetCore", "examples\SimpleConsoleNetCore\SimpleConsoleNetCore.csproj", "{4258D41F-CF4E-4F7A-B2F9-8E3FD2257041}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{71FFD7BE-73C7-4D83-B982-E5D241E492D6}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{EA80E3E7-2511-420E-9C63-9B45F25B344B}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleConsoleYoloV3", "examples\SimpleConsoleYoloV3\SimpleConsoleYoloV3.csproj", "{4258D41F-CF4E-4F7A-B2F9-8E3FD2257041}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{D24D45A4-E606-403D-AE6E-E2A8AFA5BF1B}"
-	ProjectSection(SolutionItems) = preProject
-		examples\SimpleConsoleYoloV3\coco.names = examples\SimpleConsoleYoloV3\coco.names
-		examples\SimpleConsoleYoloV3\dog.jpg = examples\SimpleConsoleYoloV3\dog.jpg
-		examples\SimpleConsoleYoloV3\yolov3.cfg = examples\SimpleConsoleYoloV3\yolov3.cfg
-		examples\SimpleConsoleYoloV3\yolov3.weights = examples\SimpleConsoleYoloV3\yolov3.weights
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleConsoleNetFramework", "examples\SimpleConsoleNetFramework\SimpleConsoleNetFramework.csproj", "{F747ADC2-3288-4282-AF53-28712005AECA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +38,10 @@ Global
 		{4258D41F-CF4E-4F7A-B2F9-8E3FD2257041}.Debug|x64.Build.0 = Debug|x64
 		{4258D41F-CF4E-4F7A-B2F9-8E3FD2257041}.Release|x64.ActiveCfg = Release|x64
 		{4258D41F-CF4E-4F7A-B2F9-8E3FD2257041}.Release|x64.Build.0 = Release|x64
+		{F747ADC2-3288-4282-AF53-28712005AECA}.Debug|x64.ActiveCfg = Debug|x64
+		{F747ADC2-3288-4282-AF53-28712005AECA}.Debug|x64.Build.0 = Debug|x64
+		{F747ADC2-3288-4282-AF53-28712005AECA}.Release|x64.ActiveCfg = Release|x64
+		{F747ADC2-3288-4282-AF53-28712005AECA}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +51,7 @@ Global
 		{8E1DD125-A767-4228-A5C6-C106B36793CA} = {71FFD7BE-73C7-4D83-B982-E5D241E492D6}
 		{4258D41F-CF4E-4F7A-B2F9-8E3FD2257041} = {EA80E3E7-2511-420E-9C63-9B45F25B344B}
 		{D24D45A4-E606-403D-AE6E-E2A8AFA5BF1B} = {EA80E3E7-2511-420E-9C63-9B45F25B344B}
+		{F747ADC2-3288-4282-AF53-28712005AECA} = {EA80E3E7-2511-420E-9C63-9B45F25B344B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1DB80A66-6382-46A0-A9BF-57BABB2BB7A3}
