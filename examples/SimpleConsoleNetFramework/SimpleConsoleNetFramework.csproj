@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\..\packages\YoloCSharp.0.9.15\build\YoloCSharp.props" Condition="Exists('..\..\packages\YoloCSharp.0.9.15\build\YoloCSharp.props')" />
+  <Import Project="..\..\packages\YoloCSharp.1.0.0\build\YoloCSharp.props" Condition="Exists('..\..\packages\YoloCSharp.1.0.0\build\YoloCSharp.props')" />
   <Import Project="..\..\packages\OpenCvSharp3-AnyCPU.3.3.1.20171117\build\OpenCvSharp3-AnyCPU.props" Condition="Exists('..\..\packages\OpenCvSharp3-AnyCPU.3.3.1.20171117\build\OpenCvSharp3-AnyCPU.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -56,8 +56,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="YoloCSharp, Version=0.9.15.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\..\packages\YoloCSharp.0.9.15\lib\netstandard2.0\YoloCSharp.dll</HintPath>
+    <Reference Include="YoloCSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\..\packages\YoloCSharp.1.0.0\lib\netstandard2.0\YoloCSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -74,7 +74,7 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\OpenCvSharp3-AnyCPU.3.3.1.20171117\build\OpenCvSharp3-AnyCPU.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\OpenCvSharp3-AnyCPU.3.3.1.20171117\build\OpenCvSharp3-AnyCPU.props'))" />
-    <Error Condition="!Exists('..\..\packages\YoloCSharp.0.9.15\build\YoloCSharp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\YoloCSharp.0.9.15\build\YoloCSharp.props'))" />
+    <Error Condition="!Exists('..\..\packages\YoloCSharp.1.0.0\build\YoloCSharp.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\YoloCSharp.1.0.0\build\YoloCSharp.props'))" />
   </Target>
   <PropertyGroup>
     <PostBuildEvent>xcopy "$(SolutionDir)examples\data" "data" /y /i</PostBuildEvent>
