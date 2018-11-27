@@ -2,6 +2,7 @@
 
 YoloCSharp is a cross platform wrapper of Yolo/Darknet for .Net Standard 2.0.
 
+- **Warning:** Only 64 bits;
 - Support for Windows/Linux/Docker;
 - Compatible with .Net Framework 4.6.1+/.Net Core 2.0;
 - GPU Computation with CUDA;
@@ -22,6 +23,8 @@ YoloCSharp is a cross platform wrapper of Yolo/Darknet for .Net Standard 2.0.
 ## Installation
 
 First, you need to install [OpenCvSharp-AnyCPU](https://github.com/shimat/opencvsharp) in the version **3.3.1.20171117** and then just download the `nuget` from the [official repository](nuget.org) in your project.
+
+**Warning:** We need to compile your project in 64 bits. For Visual Studio 2017, see the [docs](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-configure-projects-to-target-platforms?view=vs-2017).
 
 **Note:** Due to a [bug](https://github.com/AlexeyAB/darknet/issues/500#issuecomment-375927822) with OpenCV 3.4.1 and later, Yolo is not compatible with them. So these wrapper is only build for the version 3.3.1.
 
