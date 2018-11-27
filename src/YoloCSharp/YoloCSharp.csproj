@@ -2,16 +2,16 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Platforms>x64</Platforms>
-    <Version>0.9.15</Version>
+    <Version>1.0.0</Version>
     <Owners>syvido</Owners>
     <Authors>Denis Pettens</Authors>
     <Company>Microsoft Innovation Center Belgium</Company>
-    <Description>Yolo/Darknet Real-Time Object Detection for CSharp</Description>
+    <Description>Cross platform wrapper of Yolo/Darknet (Real-Time Object Detection) for CSharp. Only GPU with CUDA computation available. Need OpenCVSharp-AnyCPU in the version 3.3.1.20171117. For more information : https://github.com/micbelgique/YoloCSharp</Description>
     <Copyright>Copyright 2018</Copyright>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/micbelgique/YoloCSharp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/micbelgique/YoloCSharp</RepositoryUrl>
-    <PackageTags>OpenCv Yolo/Darknet Wrapper CV</PackageTags>
+    <PackageTags>OpenCV Yolo/Darknet Wrapper CV Real-Time Object Detection</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -20,7 +20,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OpenCvSharp3-AnyCPU" Version="3.3.1.20171117" />
+    <PackageReference Include="OpenCvSharp3-AnyCPU" Version="[3.3.1.20171117]" />
   </ItemGroup>
 
   <ItemGroup>
