@@ -58,6 +58,7 @@ RUN apt-get update \
     && tar -zxf dotnet.tar.gz -C /usr/share/dotnet \
     && rm dotnet.tar.gz \
     && ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet \
+    && dotnet help \
     && apt-get remove -y --purge wget \
     && apt-get autoremove -y \
     && apt-get clean autoclean \
