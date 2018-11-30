@@ -17,14 +17,15 @@ YoloCSharp is a cross platform wrapper of Yolo/Darknet for .Net Standard 2.0.
 
 ## Requirements
 
-1. [CUDA 10.0](https://developer.nvidia.com/cuda-downloads) and [cuDNN 7.4.1](https://developer.nvidia.com/cudnn);
-2. **On Linux**, you need to install OpenCV 3.3.1. See your distribution documentation for more information.
+1. Install [CUDA 10.0](https://developer.nvidia.com/cuda-downloads) and [cuDNN 7.4.1](https://developer.nvidia.com/cudnn);
+2. Restart your computer;
+3. **On Linux**, you need to have OpenCV 3.3.1. See your distribution documentation for more information.
 
 ## Installation
 
-First, you need to install [OpenCvSharp-AnyCPU](https://github.com/shimat/opencvsharp) in the version **3.3.1.20171117** and then just download the `nuget` from the [official repository](https://www.nuget.org/packages/YoloCSharp/) in your project.
+Simply, add the [OpenCvSharp-AnyCPU](https://github.com/shimat/opencvsharp) nuget in the version **3.3.1.20171117** and the [YoloCSharp](https://www.nuget.org/packages/YoloCSharp/) nuget` in your project.
 
-**Warning:** You need to compile your project in 64 bits. For Visual Studio 2017, see the [docs](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-configure-projects-to-target-platforms?view=vs-2017).
+**Warning:** You need to set your project in 64 bits. For Visual Studio 2017, see the [docs](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-configure-projects-to-target-platforms?view=vs-2017).
 
 **Note:** Due to a [bug](https://github.com/AlexeyAB/darknet/issues/500#issuecomment-375927822) with OpenCV 3.4.1 and later, Yolo is not compatible with them. So these wrapper is only build for the version 3.3.1.
 
